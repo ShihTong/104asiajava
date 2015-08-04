@@ -11,7 +11,7 @@ public class math3 {
 		 float a = scn.nextFloat();
 		 System.out.print("Please enter weight.");
 		    float b = scn.nextFloat();
-		    if(a>165&&b<45){
+		    if(a>=165&&b<=45){
 		    	System.out.println("Nice girl.");
 	}else{
 		System.out.println("Are you serious?");

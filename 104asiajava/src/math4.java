@@ -35,18 +35,28 @@ public class math4 {
 						if((a==10&&b>=24)||(a==11&&b<=21)){
 							System.out.println("你是天蠍，很有意志力");
 						}else{
-							if((a==6&&b>=22)||(a==7&&b<=22)){
-								System.out.println("你是巨蟹，很堅強");
-							}
-			
+							if((a==11&&b>=22)||(a==12&&b<=20)){
+								System.out.println("你是射手，很專注");
+							}else{
+									if((a==12&&b>=21)||(a==1&&b<=20)){
+										System.out.println("你是魔羯，很有智慧");
+									}else{
+										if((a==1&&b>=21)||(a==2&&b<=19)){
+											System.out.println("你是水瓶，很有節儉");
+										}else{
+											if((a==2&&b>=20)||(a==3&&b<=20)){
+												System.out.println("你是雙魚，樂於助人");
 }
 }
 }
 }
 }
-		}
-	}
-	}
-	}
 }
-
+}
+}
+}
+}
+}
+}
+}
+}
