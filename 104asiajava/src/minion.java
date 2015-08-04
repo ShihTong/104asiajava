@@ -19,15 +19,5 @@ public class minion {
     System.out.println(" 　██　███████████████ ██");
     System.out.println("　　　  █████    █████");
     System.out.println("　　 　╰───╯ 　╰───╯");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    }
-
-}
-
+	}
+	}
