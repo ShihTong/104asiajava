@@ -13,8 +13,8 @@ public class trapezoid {
    float d = g.nextFloat();
    System.out.print("請輸入高。");
    float p = g.nextFloat();
-   float x = c+d*p/2;
-		   System.out.println("三角形面積為"+x);
+   float x = (c+d)*p/2;
+		   System.out.println("梯形面積為"+x);
 	}
 
 }
