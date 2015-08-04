@@ -7,9 +7,9 @@ public class talk {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
     Scanner scn = new Scanner(System.in);
-    System.out.print("你是?");
+    System.out.print("who are you?");
     String name=scn.next();
-    System.out.println("HI，"+name+"歡迎!");
+    System.out.println("HI!"+name+".Welcome to asia!");
 	}
 
 }
