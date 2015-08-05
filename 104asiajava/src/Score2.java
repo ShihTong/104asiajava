@@ -5,50 +5,50 @@ public class Score2 {
 		// TODO Auto-generated method stub
 		Scanner scn = new  Scanner(System.in);
 		System.out.println("Enter your score.");
-		float a =scn.nextFloat();
+		int a =scn.nextInt();
 		if(a>97){
 			System.out.println("Your grade is A+.");
 	}else{
 		if(a<=97&&a>=94){
 			System.out.println("Your grade is A.");
 	}else{
-		if(a<=94&&a>91){
+		if(a<=93&&a>90){
 			System.out.println("Your grade is A-.");
 	}else{
 	}
-		if(a<=91&&a>88){
+		if(a<=90&&a>87){
 			System.out.println("Your grade is B+.");
 	}else{
 	}
-		if(a<=88&&a>85){
+		if(a<=87&&a>84){
 			System.out.println("Your grade is B.");
 	}else{
 	}
-		if(a<=85&&a>82){
+		if(a<=84&&a>80){
 			System.out.println("Your grade is B-.");
 	}else{
 	}
-		if(a<=82&&a>79){
+		if(a<80&&a>77){
 			System.out.println("Your grade is C+.");
 	}else{
 	}
-		if(a<=50&&a>53){
+		if(a<=77&&a>74){
 			System.out.println("Your grade is C.");
 	}else{
 	}
-		if(a<=53&&a>56){
+		if(a<=74&&a>71){
 			System.out.println("Your grade is C-.");
 	}else{
 	}
-		if(a<=56&&a>59){
+		if(a<=69&&a>66){
 			System.out.println("Your grade is D+.");
 	}else{
 	}
-		if(a<=59&&a>62){
+		if(a<=66&&a>63){
 			System.out.println("Your grade is D.");
 	}else{
 	}
-		if(a<=62&&a>=60){
+		if(a<=63&&a>=60){
 			System.out.println("Your grade is D-.");
 	}else{
 	}

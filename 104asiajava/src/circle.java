@@ -14,5 +14,4 @@ public class circle {
    double x = c*c*b;
 		   System.out.println("¶ê§Î­±¿n¬°"+x);
 	}
-
 }
