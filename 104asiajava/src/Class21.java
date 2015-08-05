@@ -5,7 +5,9 @@ public class Class21 {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
 		System.out.println("½Ð¿é¤J¦¨ÁZ");
-		int 
+		float a = scn.nextFloat();
+		
+		
 	}
 
 }
