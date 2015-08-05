@@ -12,31 +12,31 @@ public class Score2 {
 		if(a<=97&&a>=94){
 			System.out.println("Your grade is A.");
 	}else{
-		if(a<=93&&a>90){
+		if(a<=93&&a>=90){
 			System.out.println("Your grade is A-.");
 	}else{
 	}
-		if(a<=90&&a>87){
+		if(a<=89&&a>=86){
 			System.out.println("Your grade is B+.");
 	}else{
 	}
-		if(a<=87&&a>84){
+		if(a<=86&&a>83){
 			System.out.println("Your grade is B.");
 	}else{
 	}
-		if(a<=84&&a>80){
+		if(a<=83&&a>79){
 			System.out.println("Your grade is B-.");
 	}else{
 	}
-		if(a<80&&a>77){
+		if(a<=79&&a>76){
 			System.out.println("Your grade is C+.");
 	}else{
 	}
-		if(a<=77&&a>74){
+		if(a<=76&&a>73){
 			System.out.println("Your grade is C.");
 	}else{
 	}
-		if(a<=74&&a>71){
+		if(a<=73&&a>69){
 			System.out.println("Your grade is C-.");
 	}else{
 	}
