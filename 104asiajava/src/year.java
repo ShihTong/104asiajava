@@ -9,7 +9,7 @@ public class year {
 			if((year%10==4)||(year%400==0)){
 			System.out.println("是閏年");
 			}else{
-				if(year%100==4){
+				if(year>100&&year%100==0){
 				System.out.println("不是閏年");		
 			}else{
 				System.out.println("不是閏年");	
