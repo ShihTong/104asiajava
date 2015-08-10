@@ -12,7 +12,7 @@ public class year {
 				if(year%100==4){
 				System.out.println("不是閏年");		
 			}else{
-				System.out.println("不是論年");	
+				System.out.println("不是閏年");	
 			}
 				
 	}
