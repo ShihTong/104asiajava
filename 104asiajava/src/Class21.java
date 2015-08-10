@@ -6,7 +6,7 @@ public class Class21 {
 		Scanner scn = new Scanner(System.in);
 		System.out.println("½Ð¿é¤J¦¨ÁZ");
 		float a = scn.nextFloat();
-		
+
 		
 	}
 
