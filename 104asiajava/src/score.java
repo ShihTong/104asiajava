@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class score {
 
 	public static void main(String[] args) {
@@ -10,10 +11,10 @@ public class score {
 		float b = scn.nextFloat();
 		System.out.println("enter a Math score.");
 		float c = scn.nextFloat();
-		float d = a+b+c;
-		float e =d/3;
-		System.out.println("Your total score is"+d);
-		System.out.println("Your average score is"+e);
+		float d = a + b + c;
+		float e = d / 3;
+		System.out.println("Your total score is" + d);
+		System.out.println("Your average score is" + e);
 	}
 
 }
