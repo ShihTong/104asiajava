@@ -6,28 +6,28 @@ public class Matrix {
 		while (x > 0) {
 			Scanner scn = new Scanner(System.in);
 			int ai, aj, bi, bj;
-			System.out.print("½Ğ¿é¤J¯x°}Aªº¦æ¼Æ¡G");
+			System.out.print("è«‹è¼¸å…¥çŸ©é™£Açš„è¡Œæ•¸ï¼š");
 			ai = scn.nextInt();
-			System.out.print("½Ğ¿é¤J¯x°}Aªº¦C¼Æ¡G");
+			System.out.print("è«‹è¼¸å…¥çŸ©é™£Açš„åˆ—æ•¸ï¼š");
 			aj = scn.nextInt();
-			System.out.print("½Ğ¿é¤J¯x°}Bªº¦æ¼Æ¡G");
+			System.out.print("è«‹è¼¸å…¥çŸ©é™£Bçš„è¡Œæ•¸ï¼š");
 			bi = scn.nextInt();
 			if (aj != bi) {
-				System.out.println("¯x°}µLªk§¹¦¨¹Bºâ");
+				System.out.println("çŸ©é™£ç„¡æ³•å®Œæˆé‹ç®—");
 				continue;
 			}
-			System.out.print("½Ğ¿é¤J¯x°}Bªº¦C¼Æ¡G");
+			System.out.print("è«‹è¼¸å…¥çŸ©é™£Bçš„åˆ—æ•¸ï¼š");
 			bj = scn.nextInt();
 			int[][] a = new int[ai][aj];
 			int[][] b = new int[bi][bj];
 			for (int i = 0; i < ai; i++) {
 				for (int j = 0; j < aj; j++) {
-					System.out.print("½Ğ¿é¤J¯x°}A²Ä" + (i + 1) + "¦æªº²Ä" + (j + 1)
-							+ "­Ó¤¸¯À");
+					System.out.print("è«‹è¼¸å…¥çŸ©é™£Aç¬¬" + (i + 1) + "è¡Œçš„ç¬¬" + (j + 1)
+							+ "å€‹å…ƒç´ ");
 					a[i][j] = scn.nextInt();
 				}
 			}
-			System.out.println("¯x°}A¡G");
+			System.out.println("çŸ©é™£Aï¼š");
 			for (int i = 0; i < ai; i++) {
 				for (int j = 0; j < aj; j++) {
 					System.out.print(a[i][j] + " ");
@@ -36,29 +36,29 @@ public class Matrix {
 			}
 			for (int i = 0; i < bi; i++) {
 				for (int j = 0; j < bj; j++) {
-					System.out.print("½Ğ¿é¤J¯x°}B²Ä" + (i + 1) + "¦æªº²Ä" + (j + 1)
-							+ "­Ó¤¸¯À");
+					System.out.print("è«‹è¼¸å…¥çŸ©é™£Bç¬¬" + (i + 1) + "è¡Œçš„ç¬¬" + (j + 1)
+							+ "å€‹å…ƒç´ ");
 					b[i][j] = scn.nextInt();
 				}
 			}
-			System.out.println("¯x°}B¡G");
+			System.out.println("çŸ©é™£Bï¼š");
 			for (int i = 0; i < bi; i++) {
 				for (int j = 0; j < bj; j++) {
 					System.out.print(b[i][j] + " ");
 				}
 				System.out.println();
 			}
-				System.out.println("¹Bºâµ²ªG¬O");	
-				Arraymatrix m = new Arraymatrix();
-				m.mulMatrix(a, b);
-				m.display();
+				System.out.println("é‹ç®—çµæœæ˜¯");	
+				Matrix m = new Matrix ();
+				m.multiMatrix(a, b);
+				m.vicemain();
 				break;
 			}
 		}
 
 	private int[][] G;
 
-	public void mulMatrix(int[][] a, int[][] b) {
+	public void multiMatrix(int[][] a, int[][] b) {
 		G = new int[a.length][b[0].length];
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < b[0].length; j++) {
@@ -70,13 +70,12 @@ public class Matrix {
 		}
 	}
 
-	public void X() {
+	public void vicemain() {
 		for (int i = 0; i < G.length; i++) {
 			for (int j = 0; j < G[0].length; j++) {
 				System.out.printf("%8d", G[i][j]);
 			}
 			System.out.println("");
-			System.exit(50);
 		}
 	}
 }
