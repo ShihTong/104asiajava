@@ -48,13 +48,13 @@ public class Matrix {
 				}
 				System.out.println();
 			}
-				System.out.println("運算結果是");	
-				Matrix m = new Matrix ();
-				m.multiMatrix(a, b);
-				m.vicemain();
-				break;
-			}
+			System.out.println("運算結果是");
+			Matrix m = new Matrix();
+			m.multiMatrix(a, b);
+			m.vicemain();
+			break;
 		}
+	}
 
 	private int[][] G;
 
@@ -63,8 +63,7 @@ public class Matrix {
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < b[0].length; j++) {
 				for (int k = 0; k < a[0].length; k++) {
-					G[i][j] =G[i][j] + a[i][k]
-							* b[k][j];
+					G[i][j] = G[i][j] + a[i][k] * b[k][j];
 				}
 			}
 		}

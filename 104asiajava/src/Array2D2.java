@@ -42,12 +42,12 @@ public class Array2D2 {
 			}
 		}
 		System.out.println("痁だ计パ蔼:");
-		for(i=0;i<n;i++){
+		for (i = 0; i < n; i++) {
 			System.out.println(data[i][3]);
 		}
-			System.out.println("程蔼だ计:");
-			System.out.println( data[0][3]);
-				System.out.println("程だ计:");
-				System.out.println(data[n-1][3]);
-			}
+		System.out.println("程蔼だ计:");
+		System.out.println(data[0][3]);
+		System.out.println("程だ计:");
+		System.out.println(data[n - 1][3]);
 	}
+}

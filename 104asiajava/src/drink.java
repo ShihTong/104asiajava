@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class drink {
 
 	public static void main(String[] args) {
@@ -10,15 +11,15 @@ public class drink {
 		String st = drink.next();
 		System.out.println("請輸入價格");
 		int a = drink.nextInt();
-		if(str.equals("五十嵐")||a>45){
+		if (str.equals("五十嵐") || a > 45) {
 			System.out.println("不會買");
-			
-	}else{
-		if(st.equals("綠茶")||st.equals("咖啡")&&a<=45){
-			System.out.println("會買");
-		}
-		
-	}
 
-}
+		} else {
+			if (st.equals("綠茶") || st.equals("咖啡") && a <= 45) {
+				System.out.println("會買");
+			}
+
+		}
+
+	}
 }

@@ -1,4 +1,5 @@
-public class function2 {
+
+public class work {
 
 	/**
 	 * @param args

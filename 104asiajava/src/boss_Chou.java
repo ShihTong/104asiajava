@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class boss_Chou {
 
 	/**
@@ -11,15 +12,12 @@ public class boss_Chou {
 		int a = day.nextInt();
 		System.out.println("今天幾號？");
 		int b = day.nextInt();
-		if((a==2||a==4||a==6)&&(b%10!=7)){
+		if ((a == 2 || a == 4 || a == 6) && (b % 10 != 7)) {
 			System.out.println("今天吃素");
-		}else{
+		} else {
 			System.out.println("今天吃肉");
-			
-			
-		
+
+		}
 
 	}
-
-}
 }
