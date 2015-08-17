@@ -12,14 +12,14 @@ public class Common_Diviso2 {
 		System.out.print("請輸入第三個整數：");
 		int o = scan.nextInt();
 
-		System.out.println(Common_Diviso(m, n, o));
+		System.out.println(GCD(m, n, o));
 	}
 
-	public static int Common_Diviso(int m, int n,int o) {
+	public static int GCD(int m, int n,int o) {
 		if (m % n == 0||m%o==0||n%o==0) {
 
 		} else {
-			return Common_Diviso(n, m % n, o%n);
+			return GCD(n, m % n, o%n);
 		}
 		return n;
 	}
