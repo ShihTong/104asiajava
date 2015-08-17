@@ -15,10 +15,9 @@ public class Common_Diviso {
 
 	public static int GCD(int m, int n) {
 		if (m % n == 0) {
-
+			return n;
 		} else {
 			return GCD(n, m % n);
 		}
-		return n;
 	}
 }
