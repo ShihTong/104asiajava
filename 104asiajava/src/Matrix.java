@@ -6,28 +6,28 @@ public class Matrix {
 		while (x > 0) {
 			Scanner scn = new Scanner(System.in);
 			int ai, aj, bi, bj;
-			System.out.print("è«‹è¼¸å…¥çŸ©é™£Açš„è¡Œæ•¸ï¼š");
+			System.out.print("½Ğ¿é¤J¯x°}Aªº¦æ¼Æ¡G");
 			ai = scn.nextInt();
-			System.out.print("è«‹è¼¸å…¥çŸ©é™£Açš„åˆ—æ•¸ï¼š");
+			System.out.print("½Ğ¿é¤J¯x°}Aªº¦C¼Æ¡G");
 			aj = scn.nextInt();
-			System.out.print("è«‹è¼¸å…¥çŸ©é™£Bçš„è¡Œæ•¸ï¼š");
+			System.out.print("½Ğ¿é¤J¯x°}Bªº¦æ¼Æ¡G");
 			bi = scn.nextInt();
 			if (aj != bi) {
-				System.out.println("çŸ©é™£ç„¡æ³•å®Œæˆé‹ç®—");
+				System.out.println("¯x°}µLªk§¹¦¨¹Bºâ");
 				continue;
 			}
-			System.out.print("è«‹è¼¸å…¥çŸ©é™£Bçš„åˆ—æ•¸ï¼š");
+			System.out.print("½Ğ¿é¤J¯x°}Bªº¦C¼Æ¡G");
 			bj = scn.nextInt();
 			int[][] a = new int[ai][aj];
 			int[][] b = new int[bi][bj];
 			for (int i = 0; i < ai; i++) {
 				for (int j = 0; j < aj; j++) {
-					System.out.print("è«‹è¼¸å…¥çŸ©é™£Aç¬¬" + (i + 1) + "è¡Œçš„ç¬¬" + (j + 1)
-							+ "å€‹å…ƒç´ ");
+					System.out.print("½Ğ¿é¤J¯x°}A²Ä" + (i + 1) + "¦æªº²Ä" + (j + 1)
+							+ "­Ó¤¸¯À");
 					a[i][j] = scn.nextInt();
 				}
 			}
-			System.out.println("çŸ©é™£Aï¼š");
+			System.out.println("¯x°}A¡G");
 			for (int i = 0; i < ai; i++) {
 				for (int j = 0; j < aj; j++) {
 					System.out.print(a[i][j] + " ");
@@ -36,19 +36,19 @@ public class Matrix {
 			}
 			for (int i = 0; i < bi; i++) {
 				for (int j = 0; j < bj; j++) {
-					System.out.print("è«‹è¼¸å…¥çŸ©é™£Bç¬¬" + (i + 1) + "è¡Œçš„ç¬¬" + (j + 1)
-							+ "å€‹å…ƒç´ ");
+					System.out.print("½Ğ¿é¤J¯x°}B²Ä" + (i + 1) + "¦æªº²Ä" + (j + 1)
+							+ "­Ó¤¸¯À");
 					b[i][j] = scn.nextInt();
 				}
 			}
-			System.out.println("çŸ©é™£Bï¼š");
+			System.out.println("¯x°}B¡G");
 			for (int i = 0; i < bi; i++) {
 				for (int j = 0; j < bj; j++) {
 					System.out.print(b[i][j] + " ");
 				}
 				System.out.println();
 			}
-				System.out.println("é‹ç®—çµæœæ˜¯");	
+				System.out.println("¹Bºâµ²ªG¬O");	
 				Matrix m = new Matrix ();
 				m.multiMatrix(a, b);
 				m.vicemain();
