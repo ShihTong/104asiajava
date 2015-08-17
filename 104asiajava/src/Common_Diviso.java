@@ -10,14 +10,14 @@ public class Common_Diviso {
 		System.out.print("請輸入第二個整數：");
 		int n = scan.nextInt();
 
-		System.out.println(Common_Diviso(m, n));
+		System.out.println(GCD(m, n));
 	}
 
-	public static int Common_Diviso(int m, int n) {
+	public static int GCD(int m, int n) {
 		if (m % n == 0) {
 
 		} else {
-			return Common_Diviso(n, m % n);
+			return GCD(n, m % n);
 		}
 		return n;
 	}
