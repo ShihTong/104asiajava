@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class Common_Diviso {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		Scanner scn = new Scanner(System.in);
 
 		System.out.print("請輸入第一個整數：");
-		int m = scan.nextInt();
+		int m = scn.nextInt();
 		System.out.print("請輸入第二個整數：");
-		int n = scan.nextInt();
+		int n = scn.nextInt();
 
 		System.out.println(GCD(m, n));
 	}

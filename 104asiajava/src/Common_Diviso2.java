@@ -1,26 +1,22 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Common_Diviso2 {
-
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
 
-		System.out.print("請輸入第一個整數：");
-		int m = scan.nextInt();
-		System.out.print("請輸入第二個整數：");
-		int n = scan.nextInt();
-		System.out.print("請輸入第三個整數：");
-		int o = scan.nextInt();
-
-		System.out.println(GCD(m, n, o));
-	}
-
-	public static int GCD(int m, int n,int o) {
-		if (m % n == 0||m%o==0||n%o==0) {
-
-		} else {
-			return GCD(n, m % n, o%n);
+		// 最大公因數
+		int input[] = new int[3];
+		int i;
+		Scanner scanner = new Scanner(System.in);
+		for (int j = 0; j < 3; j++) {
+			System.out.println("請輸入第" + (j + 1) + "個數字：");
+			input[j] = scanner.nextInt();
 		}
-		return n;
+			for (i = input[2]; i >= 1; i--) {
+				if ((input[0] % i == 0) && (input[1] % i == 0)
+						&& (input[2] % i == 0)) {
+					System.out.println("最大公因數為：" + i);
+					break;
+				}
+			}
+		}
 	}
-}
