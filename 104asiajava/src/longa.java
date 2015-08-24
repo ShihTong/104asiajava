@@ -8,7 +8,7 @@ public class longa {
 		int a = 0;
 		int kg = 0;
 		while (kg < 600) {
-			System.out.println("輸入公斤數");
+			System.out.println("輸入公斤數:");
 			int b = scn.nextInt();
 			kg = kg + b;
 			a++;

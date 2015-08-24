@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.JFormattedTextField;
+
 public class passwardmain extends JFrame {
 
 	/**
@@ -12,11 +13,11 @@ public class passwardmain extends JFrame {
 	private JButton jbtnGuess = new JButton("Guess");
 	private JTextArea answer = new JTextArea();
 	private JLabel jlb1 = new JLabel();
+	private JLabel jlb2 = new JLabel();
 	private Container cp;
 	private char a = 'A';
 	private char b = 'B';
-	private String hintText = "請輸入1~9999";
-	private JFormattedTextField number = new JFormattedTextField(hintText);
+	private JFormattedTextField number = new JFormattedTextField();
 
 	public passwardmain() {
 		initComp();
@@ -31,18 +32,21 @@ public class passwardmain extends JFrame {
 		cp.add(number);
 		cp.add(jbtnGuess);
 		cp.add(answer);
-		cp.add(jlb1);
+		cp.add(jlb2);
+
 		jlb1.setBounds(50, 125, 300, 25);
 		jlb1.setText("顯示A為同個位數相同,顯示B為不同位數相同");
-		number.setBounds(30, 100, 150, 25);
-		jbtnGuess.setBounds(250, 100, 100, 25);
+		jlb2.setBounds(50, 75, 300, 25);
+		jlb2.setText("請輸入1~9999");
+		number.setBounds(30, 50, 150, 25);
+		jbtnGuess.setBounds(250, 50, 100, 25);
 		answer.setBounds(30, 150, 320, 380);
 
 		number.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent a) {
 				int keyChar = a.getKeyChar();
 				char c = a.getKeyChar();
-
+	
 				if (number.getText().length() < 4 && keyChar >= KeyEvent.VK_0
 						&& keyChar <= KeyEvent.VK_9) {
 				} else {
@@ -61,6 +65,6 @@ public class passwardmain extends JFrame {
 				number.setText(" ");
 			}
 		});
-		
+
 	}
 }
