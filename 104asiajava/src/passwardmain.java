@@ -63,5 +63,12 @@ public class passwardmain extends JFrame {
 				number.setText(" ");
 			}
 		});
+		answer.addKeyListener(new KeyAdapter() {
+			public void keyTyped(KeyEvent b) {
+				b.consume();
+
+			}
+		});
+		
 	}
 }
