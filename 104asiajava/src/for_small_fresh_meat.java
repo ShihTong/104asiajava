@@ -5,11 +5,11 @@ public class for_small_fresh_meat {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
-		System.out.println("請輸入正方形.菱形.三角形");
+		System.out.println("請輸入正方形.菱形.三角形:");
 		String str = scn.nextLine();
-		System.out.println("請輸入高度");
+		System.out.println("請輸入高度:");
 		int c = scn.nextInt();
-		System.out.println("請輸入字元");
+		System.out.println("請輸入字元:");
 		String str1 = scn.next();
 		char[] ch = str1.toCharArray();
 		if (str.equals("菱形")) {

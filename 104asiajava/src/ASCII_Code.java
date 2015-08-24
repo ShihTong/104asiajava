@@ -5,7 +5,7 @@ public class ASCII_Code {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
-		System.out.println("Enter a word!");
+		System.out.println("Enter a word:");
 		String str = scn.next();
 		char[] ch = str.toCharArray();
 		for (int i = 0; i < ch.length; i++) {

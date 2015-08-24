@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.JFormattedTextField;
-
 public class passwardmain extends JFrame {
 
 	/**
@@ -13,10 +12,11 @@ public class passwardmain extends JFrame {
 	private JButton jbtnGuess = new JButton("Guess");
 	private JTextArea answer = new JTextArea();
 	private JLabel jlb1 = new JLabel();
-	private TextField number = new TextField();
 	private Container cp;
 	private char a = 'A';
 	private char b = 'B';
+	private String hintText = "½Ð¿é¤J1~9999";
+	private JFormattedTextField number = new JFormattedTextField(hintText);
 
 	public passwardmain() {
 		initComp();
@@ -41,17 +41,26 @@ public class passwardmain extends JFrame {
 		number.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent a) {
 				int keyChar = a.getKeyChar();
-				if (keyChar >= KeyEvent.VK_0 && keyChar <= KeyEvent.VK_9||keyChar == KeyEvent.VK_Backspace) {
+				char c = a.getKeyChar();
+
+				if (number.getText().length() < 4 && keyChar >= KeyEvent.VK_0
+						&& keyChar <= KeyEvent.VK_9) {
 				} else {
-					a.consume();
+					if (keyChar == KeyEvent.VK_BACK_SPACE) {
+					} else {
+						a.consume();
+					}
 				}
 			}
+
 		});
+
 		jbtnGuess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent b) {
 				float c = Float.parseFloat(number.getText());
+				number.setText(" ");
 			}
 		});
-
+		
 	}
 }

@@ -8,11 +8,11 @@ public class cargod {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
-		System.out.print("¿é¤J¶É¨¤.");
+		System.out.print("¿é¤J¶É¨¤:");
 		float a = scn.nextFloat();
-		System.out.print("¿é¤J¨â½ü¶b¤ß.");
+		System.out.print("¿é¤J¨â½ü¶b¤ß:");
 		float b = scn.nextFloat();
-		System.out.print("¿é¤J½ü­L¤Ø¤o.");
+		System.out.print("¿é¤J½ü­L¤Ø¤o.:");
 		float c = scn.nextFloat();
 		if (a > 43 && b >= 130 && c == 12) {
 			System.out.print("¶R¤F");

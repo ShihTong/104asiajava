@@ -8,7 +8,7 @@ public class circle {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner g = new Scanner(System.in);
-		System.out.print("請輸入半徑。");
+		System.out.print("請輸入半徑:");
 		float c = g.nextFloat();
 		double b = 3.14159265;
 		double x = c * c * b;

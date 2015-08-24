@@ -11,5 +11,6 @@ public class passward {
 		passward1.setTitle("2A1B¤~¯à¦Y!");
 		passward1.setVisible(true);
 	}
+	
 
 }
