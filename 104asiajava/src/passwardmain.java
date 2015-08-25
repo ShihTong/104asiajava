@@ -40,11 +40,11 @@ public class passwardmain extends JFrame {
 		jbtnGuess.setBounds(250, 50, 100, 25);
 		answer.setBounds(30, 150, 320, 380);
 		number.setToolTipText("½Ð¿é¤J1~9999");
+
 		number.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent a) {
 				int keyChar = a.getKeyChar();
-				char c = a.getKeyChar();
-	
+
 				if (number.getText().length() < 4 && keyChar >= KeyEvent.VK_0
 						&& keyChar <= KeyEvent.VK_9) {
 				} else {
@@ -58,17 +58,17 @@ public class passwardmain extends JFrame {
 		});
 
 		jbtnGuess.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent b) {
+			public void actionPerformed(ActionEvent a) {
 				float c = Float.parseFloat(number.getText());
-				number.setText(" ");
+				number.setText("");
 			}
 		});
+		
 		answer.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent b) {
 				b.consume();
 
 			}
 		});
-		
 	}
 }
