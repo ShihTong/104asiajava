@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.JFormattedTextField;
 
+@SuppressWarnings("serial")
 public class passwardmain extends JFrame {
 
 	protected static final String Interger = null;
@@ -12,18 +13,20 @@ public class passwardmain extends JFrame {
 
 	// TODO Auto-generated method stub
 	private JButton jbtnGuess = new JButton("Guess");
+	private JButton jbtnFood = new JButton("要吃什麼?");
 	private JTextArea answer = new JTextArea();
-	private JScrollPane scroll =  new JScrollPane(answer);
+	private JScrollPane scroll = new JScrollPane(answer);
 	private JLabel jlb1 = new JLabel();
 	private JLabel jlb2 = new JLabel();
 	private Container cp;
 	private JFormattedTextField number = new JFormattedTextField();
-	private int A=0,B=0,X=0;
+	private int A = 0, B = 0, X = 0;
 	private int[] data = new int[4];
 	private int[] user = new int[4];
+
 	public passwardmain() {
 		initComp();
-		 data = rndNum();
+		data = rndNum();
 	}
 
 	private void initComp() {
@@ -41,6 +44,7 @@ public class passwardmain extends JFrame {
 		jlb1.setText("顯示A為同個位數相同,顯示B為不同位數相同");
 		number.setBounds(30, 50, 150, 25);
 		jbtnGuess.setBounds(250, 50, 100, 25);
+		jbtnFood.setBounds(250, 50, 100, 25);
 		scroll.setBounds(30, 150, 320, 380);
 		number.setToolTipText("請輸入四位數");
 
@@ -63,53 +67,58 @@ public class passwardmain extends JFrame {
 		jbtnGuess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent a) {
 				int c = Integer.parseInt(number.getText());
-				X=0;
-				if(number.getText().length() == 4){
-				while(X<4){
-			        A=0;
-			        B=0;
-			        int num=(c);
-			        user[0] = num/1000%10;
-			        user[1] = num/100%10;
-			        user[2] = num/10%10;
-			        user[3] = num/1%10;
-			        for(int i=0 ; i<4 ; i++){
-			        	if(user[i] == data[i]){
-			        		A++;
-			        	}
-			        	for(int j=0 ; j<4 ; j++){
-			        		if(data[i] == user[j]){
-			        			B++;
-			        		}
-			        	}
-			        }
-			        B = B-A;
-			        answer.append(A+"A"+B+"B\n");
-			        if(A==4){
-			        	answer.append("你贏啦!\n");
-			        }else{
-			        	answer.append("尚未答對，請繼續猜!\n");
-			        	
-			        }
-			        X=4;
+				X = 0;
+				if (number.getText().length() == 4) {
+					while (X < 4) {
+						A = 0;
+						B = 0;
+						int num = (c);
+						user[0] = num / 1000 % 10;
+						user[1] = num / 100 % 10;
+						user[2] = num / 10 % 10;
+						user[3] = num / 1 % 10;
+						for (int i = 0; i < 4; i++) {
+							if (user[i] == data[i]) {
+								A++;
+							}
+							for (int j = 0; j < 4; j++) {
+								if (data[i] == user[j]) {
+									B++;
+								}
+							}
+						}
+						B = B - A;
+						answer.append(number.getText() + "\n");
+						answer.append(A + "A" + B + "B\n");
+						if (A == 4) {
+							JOptionPane.showMessageDialog(null, "			"
+									+ "你贏啦!可以吃東西了!", "恭喜!!!",
+									JOptionPane.PLAIN_MESSAGE);
+						} else {
+							answer.append("尚未答對，請繼續猜!\n");
+
+						}
+						X = 4;
+					}
+					number.setText("");
 				}
-				number.setText("");
 			}
-				}
 		});
-		
+
 		answer.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent b) {
 				b.consume();
 
 			}
 		});
-	}public static int[] rndNum(){
+	}
+
+	public static int[] rndNum() {
 		int[] num = new int[4];
-		for(int i=0; i<4 ; i++){
-			num[i] = (int)(Math.random()*10);
-			for(int j=0 ; j<i ; j++){
-				if(num[i] == num[j]){
+		for (int i = 0; i < 4; i++) {
+			num[i] = (int) (Math.random() * 10);
+			for (int j = 0; j < i; j++) {
+				if (num[i] == num[j]) {
 					i--;
 					break;
 				}
