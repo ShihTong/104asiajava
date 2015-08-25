@@ -90,7 +90,7 @@ public class passwardmain extends JFrame {
 						B = B - A;
 						answer.append(number.getText() + "\n");
 						answer.append(A + "A" + B + "B\n");
-						if (A == 4) {
+						if (A == 2&&B == 1) {
 							JOptionPane.showMessageDialog(null, "			"
 									+ "你贏啦!可以吃東西了!", "恭喜!!!",
 									JOptionPane.PLAIN_MESSAGE);
