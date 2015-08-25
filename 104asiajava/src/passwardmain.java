@@ -18,6 +18,8 @@ public class passwardmain extends JFrame {
 	private JScrollPane scroll = new JScrollPane(answer);
 	private JLabel jlb1 = new JLabel();
 	private JLabel jlb2 = new JLabel();
+	private Frame frame;
+	private Dialog win = new Dialog(frame, "new");
 	private Container cp;
 	private JFormattedTextField number = new JFormattedTextField();
 	private int A = 0, B = 0, X = 0;
@@ -90,10 +92,11 @@ public class passwardmain extends JFrame {
 						B = B - A;
 						answer.append(number.getText() + "\n");
 						answer.append(A + "A" + B + "B\n");
-						if (A == 2&&B == 1) {
-							JOptionPane.showMessageDialog(null, "			"
-									+ "你贏啦!可以吃東西了!", "恭喜!!!",
-									JOptionPane.PLAIN_MESSAGE);
+						if (A == 2 && B == 1) {
+							 win.setBounds(30, 150, 320, 380);
+						        win.add(new Label("你贏啦!可以吃東西了!\n"));
+						        win.setTitle("恭喜!!!");
+						        win.setVisible(true);
 						} else {
 							answer.append("尚未答對，請繼續猜!\n");
 
