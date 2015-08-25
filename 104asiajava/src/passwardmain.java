@@ -93,14 +93,13 @@ public class passwardmain extends JFrame {
 						answer.append(number.getText() + "\n");
 						answer.append(A + "A" + B + "B\n");
 						if (A == 2 && B == 1) {
-							 win.setBounds(30, 150, 320, 380);
+							win.setBounds(550, 200, 200, 100);
 						        win.add(new Label("你贏啦!可以吃東西了!\n"));
 						        win.setTitle("恭喜!!!");
-						        win.setBounds(550, 200, 200, 100);
 						        win.setVisible(true);
 						} else {
 							answer.append("尚未答對，請繼續猜!\n");
-
+							
 						}
 						X = 4;
 					}
