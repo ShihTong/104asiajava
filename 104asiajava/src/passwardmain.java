@@ -123,8 +123,8 @@ public class passwardmain extends JFrame {
 		int n = JOptionPane.showConfirmDialog(null,
 				"你贏啦!可以吃東西了!\n不知道吃什麼,按這決定吧!","恭喜!!!", JOptionPane.YES_NO_OPTION);
 		if(n == JOptionPane.YES_OPTION){
-			String resturant[] = { "嗶嗶飯", "牛肉麵", "禾家", "火鍋", "狸之家", "圈圈",
-					"麥當勞", "全家", "7-11", "涼麵", "這一間早餐", "來來", "四海", "必勝客" };
+			String resturant[] = { "霧峰老牌羊肉\n在霧峰區樹仁路25號", "牛肉麵", "禾家", "火鍋", "狸之家", "圈圈",
+					"麥當勞", "全家", "7-11", "涼麵", "這一間早餐", "來來", "四海遊龍", "必勝客" };
 			int a = (int) (Math.random() * resturant.length);
 			System.out.println((a + 1) + "." + resturant[a]);
 			JOptionPane.showConfirmDialog(null,
