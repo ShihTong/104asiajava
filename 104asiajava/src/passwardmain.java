@@ -6,14 +6,12 @@ import javax.swing.JFormattedTextField;
 @SuppressWarnings("serial")
 public class passwardmain extends JFrame {
 
-	protected static final String Interger = null;
 	/**
 	 * @param args
 	 */
 
 	// TODO Auto-generated method stub
 	private JButton jbtnGuess = new JButton("Guess");
-	private JButton jbtnFood = new JButton("要吃什麼?");
 	private JTextArea answer = new JTextArea();
 	private JScrollPane scroll = new JScrollPane(answer);
 	private JLabel jlb1 = new JLabel();
@@ -46,9 +44,8 @@ public class passwardmain extends JFrame {
 		jlb1.setText("顯示A為同個位數相同,顯示B為不同位數相同");
 		number.setBounds(30, 50, 150, 25);
 		jbtnGuess.setBounds(250, 50, 100, 25);
-		jbtnFood.setBounds(250, 50, 100, 25);
 		scroll.setBounds(30, 150, 320, 380);
-		number.setToolTipText("請輸入四位數");
+		number.setToolTipText("請輸入不相同的四個數字!!");
 
 		number.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent a) {
@@ -69,16 +66,25 @@ public class passwardmain extends JFrame {
 		jbtnGuess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent a) {
 				int c = Integer.parseInt(number.getText());
-				X = 0;
-				if (number.getText().length() == 4) {
-					while (X < 4) {
-						A = 0;
-						B = 0;
-						int num = (c);
-						user[0] = num / 1000 % 10;
-						user[1] = num / 100 % 10;
-						user[2] = num / 10 % 10;
-						user[3] = num / 1 % 10;
+					A = 0;
+					B = 0;
+					boolean tt = false;
+					int num = (c);
+					user[0] = num / 1000 % 10;
+					user[1] = num / 100 % 10;
+					user[2] = num / 10 % 10;
+					user[3] = num / 1 % 10;
+					for (int i = 0; i < 4; i++) {
+						for (int j = 0; j < i; j++) {
+							if (user[i] == user[j]) {
+								answer.append("輸入錯誤，請再試一次!\n");
+								tt = true;
+								break;
+							}
+						}
+						if (tt) break;
+					}
+					if (tt == false) {
 						for (int i = 0; i < 4; i++) {
 							if (user[i] == data[i]) {
 								A++;
@@ -90,21 +96,25 @@ public class passwardmain extends JFrame {
 							}
 						}
 						B = B - A;
-						answer.append(number.getText() + "\n");
-						answer.append(A + "A" + B + "B\n");
-						if (A == 2 && B == 1) {
-							win.setBounds(550, 200, 200, 100);
-						        win.add(new Label("你贏啦!可以吃東西了!\n"));
-						        win.setTitle("恭喜!!!");
-						        win.setVisible(true);
+						answer.append(number.getText() + "\t");
+						answer.append(A + "A" + B + "B\t");
+						if (A == 4) {
+							answer.append("你贏啦!可以吃東西了!\n");
+							popFrame("你贏啦!可以吃東西了!");/*
+							win.setBounds(550, 200, 400, 300);
+							win.add(new Label("你贏啦!可以吃東西了!\n"));
+							win.setTitle("恭喜!!!");
+							win.setVisible(true);
+							JButton jbtnFood = new JButton("不知道吃什麼,按這決定吧!");
+							win.add(jbtnFood);
+							jbtnFood.setBounds(550, 200, 400, 300);*/
 						} else {
 							answer.append("尚未答對，請繼續猜!\n");
-							
 						}
-						X = 4;
 					}
+					X = 4;
 					number.setText("");
-				}
+				
 			}
 		});
 
@@ -115,7 +125,21 @@ public class passwardmain extends JFrame {
 			}
 		});
 	}
-
+	public static void popFrame(String message){
+		
+		int n = JOptionPane.showConfirmDialog(null,
+				"你贏啦!可以吃東西了!\n不知道吃什麼,按這決定吧!","恭喜!!!", JOptionPane.YES_NO_OPTION);
+		if(n == JOptionPane.YES_OPTION){
+			String resturant[] = { "嗶嗶飯", "牛肉麵", "禾家", "火鍋", "狸之家", "圈圈",
+					"麥當勞", "全家", "7-11", "涼麵", "這一間早餐", "來來", "四海", "必勝客" };
+			int a = (int) (Math.random() * resturant.length);
+			System.out.println((a + 1) + "." + resturant[a]);
+			JOptionPane.showConfirmDialog(null,
+					resturant[a],"恭喜!!!", JOptionPane.YES_OPTION);
+		}else{
+			System.exit(0);
+		}
+	}
 	public static int[] rndNum() {
 		int[] num = new int[4];
 		for (int i = 0; i < 4; i++) {
@@ -126,6 +150,9 @@ public class passwardmain extends JFrame {
 					break;
 				}
 			}
+		}
+		for(int n:num){
+			System.out.print(n+"");
 		}
 		return num;
 	}
