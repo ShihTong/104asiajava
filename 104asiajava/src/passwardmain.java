@@ -41,11 +41,11 @@ public class passwardmain extends JFrame {
 		cp.add(jlb2);
 
 		jlb1.setBounds(50, 125, 300, 25);
-		jlb1.setText("é¡¯ç¤ºAç‚ºåŒå€‹ä½æ•¸ç›¸åŒ,é¡¯ç¤ºBç‚ºä¸åŒä½æ•¸ç›¸åŒ");
+		jlb1.setText("Åã¥ÜA¬°¦P­Ó¦ì¼Æ¬Û¦P,Åã¥ÜB¬°¤£¦P¦ì¼Æ¬Û¦P");
 		number.setBounds(30, 50, 150, 25);
 		jbtnGuess.setBounds(250, 50, 100, 25);
 		scroll.setBounds(30, 150, 320, 380);
-		number.setToolTipText("è«‹è¼¸å…¥ä¸ç›¸åŒçš„å››å€‹æ•¸å­—!!");
+		number.setToolTipText("½Ğ¿é¤J¤£¬Û¦Pªº¥|­Ó¼Æ¦r!!");
 
 		number.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent a) {
@@ -77,7 +77,7 @@ public class passwardmain extends JFrame {
 					for (int i = 0; i < 4; i++) {
 						for (int j = 0; j < i; j++) {
 							if (user[i] == user[j]) {
-								answer.append("è¼¸å…¥éŒ¯èª¤ï¼Œè«‹å†è©¦ä¸€æ¬¡!\n");
+								answer.append("¿é¤J¿ù»~¡A½Ğ¦A¸Õ¤@¦¸!\n");
 								tt = true;
 								break;
 							}
@@ -99,10 +99,10 @@ public class passwardmain extends JFrame {
 						answer.append(number.getText() + "\t");
 						answer.append(A + "A" + B + "B\t");
 						if (A == 4) {
-							answer.append("ä½ è´å•¦!å¯ä»¥åƒæ±è¥¿äº†!\n");
-							popFrame("ä½ è´å•¦!å¯ä»¥åƒæ±è¥¿äº†!");
+							answer.append("§AÄ¹°Õ!¥i¥H¦YªF¦è¤F!\n");
+							popFrame("§AÄ¹°Õ!¥i¥H¦YªF¦è¤F!");
 						} else {
-							answer.append("å°šæœªç­”å°ï¼Œè«‹ç¹¼çºŒçŒœ!\n");
+							answer.append("©|¥¼µª¹ï¡A½ĞÄ~Äò²q!\n");
 						}
 					}
 					X = 4;
@@ -121,14 +121,15 @@ public class passwardmain extends JFrame {
 	public static void popFrame(String message){
 		
 		int n = JOptionPane.showConfirmDialog(null,
-				"ä½ è´å•¦!å¯ä»¥åƒæ±è¥¿äº†!\nä¸çŸ¥é“åƒä»€éº¼,æŒ‰é€™æ±ºå®šå§!","æ­å–œ!!!", JOptionPane.YES_NO_OPTION);
+				"§AÄ¹°Õ!¥i¥H¦YªF¦è¤F!\n¤£ª¾¹D¦Y¤°»ò,«ö³o¨M©w§a!","®¥³ß!!!", JOptionPane.YES_NO_OPTION);
 		if(n == JOptionPane.YES_OPTION){
-			String resturant[] = { "å—¶å—¶é£¯", "ç‰›è‚‰éºµ", "ç¦¾å®¶", "ç«é‹", "ç‹¸ä¹‹å®¶", "åœˆåœˆ",
-					"éº¥ç•¶å‹", "å…¨å®¶", "7-11", "æ¶¼éºµ", "é€™ä¸€é–“æ—©é¤", "ä¾†ä¾†", "å››æµ·", "å¿…å‹å®¢" };
+			String resturant[] = { "¹Í¹Í¶º", "¤û¦×ÄÑ", "¥İ®a", "¤õÁç", "¯W¤§®a", "°é°é",
+					"³Á·í³Ò", "¥ş®a", "7-11", "²DÄÑ", "³o¤@¶¡¦­À\", "¨Ó¨Ó", "¥|®ü", "¥²³Ó«È" };
 			int a = (int) (Math.random() * resturant.length);
 			System.out.println((a + 1) + "." + resturant[a]);
 			JOptionPane.showConfirmDialog(null,
-					"ç¾åœ¨å»åƒ"+resturant[a]+"å§!","åƒé£¯äº†!", JOptionPane.YES_OPTION);
+					"²{¦b¥h¦Y"+resturant[a]+"§a!","¦Y¶º¤F!", JOptionPane.YES_OPTION);
+			System.exit(0);
 		}else{
 			System.exit(0);
 		}
