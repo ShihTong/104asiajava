@@ -19,7 +19,7 @@ public class passwardmain extends JFrame {
 	private JLabel jlb3 = new JLabel();
 	private Container cp;
 	private JFormattedTextField number = new JFormattedTextField();
-	private int A = 0, B = 0, count = 0;
+	private int A = 0, B = 0, count = 0,count2=10;
 	private int[] data = new int[4];
 	private int[] user = new int[4];
 
@@ -67,13 +67,18 @@ public class passwardmain extends JFrame {
 			public void actionPerformed(ActionEvent a) {
 				if (number.getText().length() == 4) {
 					count++;
-					if (count >= 1) {
+					count2--;
+					if (count >= 1&&count2<=10) {
 						jlb2.setBounds(200, 25, 300, 25);
-						jlb2.setText("你已經猜了" + count + "次!");
-						jlb2.setText("你已經猜了" + count + "次!" + " " + "剩下"
-								+ (10 - count) + "次機會了!");
+						jlb2.setText("你已經猜了" + count + "次!" + " " );
 						jlb3.setText("");
-					}
+						jlb3.setBounds(290, 25, 300, 25);
+						jlb3.setText( "剩下"+ count2 + "次機會了!");
+						if(count2==10){
+							jlb2.setText("");
+							jlb3.setBounds(250, 25, 300, 25);
+							jlb3.setText("你有10次機會!!!");
+						}
 					int c = Integer.parseInt(number.getText());
 					A = 0;
 					B = 0;
@@ -87,7 +92,16 @@ public class passwardmain extends JFrame {
 					for (int i = 0; i < 4; i++) {
 						for (int j = 0; j < i; j++) {
 							if (user[i] == user[j]) {
+								count--;
+								count2++;
+								jlb2.setText("你已經猜了" + count + "次!" + " " );
+								jlb3.setText( "剩下"+ count2 + "次機會了!");
 								answer.append("請物輸入相同的數字，請再試一次!\n");
+								if(count2==10){
+									jlb2.setText("");
+									jlb3.setBounds(250, 25, 300, 25);
+									jlb3.setText("你有10次機會!!!");
+								}
 								tt = true;
 								break;
 							}
@@ -126,16 +140,18 @@ public class passwardmain extends JFrame {
 								null, option, option[0]);
 						if (n == JOptionPane.YES_OPTION) {
 							count=0;
+							count2=10;
 							data = rndNum();
 							answer.setText("");
 							jlb2.setText("");
 							jlb3.setText("你有10次機會!!!");
+							jlb3.setBounds(250, 25, 300, 25);
 						} else {
 							System.exit(0);
 						}
 
 					}
-				}
+				}}
 			}
 		});
 
@@ -189,9 +205,9 @@ public class passwardmain extends JFrame {
 				}
 			}
 		}
-		// for (int n : num) {
-		// System.out.print(n + "");
-		 //}
+		 for (int n : num) {
+		 System.out.print(n + "");
+		 }
 		return num;
 	}
 }
