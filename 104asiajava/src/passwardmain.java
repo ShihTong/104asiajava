@@ -128,6 +128,8 @@ public class passwardmain extends JFrame {
 							count=0;
 							data = rndNum();
 							answer.setText("");
+							jlb2.setText("");
+							jlb3.setText("你有10次機會!!!");
 						} else {
 							System.exit(0);
 						}
