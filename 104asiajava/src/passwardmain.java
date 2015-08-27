@@ -17,7 +17,6 @@ public class passwardmain extends JFrame {
 	private JLabel jlb1 = new JLabel();
 	private JLabel jlb2 = new JLabel();
 
-	
 	private Container cp;
 	private JFormattedTextField number = new JFormattedTextField();
 	private int A = 0, B = 0, X = 0;
@@ -50,13 +49,15 @@ public class passwardmain extends JFrame {
 		number.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent a) {
 				int keyChar = a.getKeyChar();
-
-				if (number.getText().length() < 4 && keyChar >= KeyEvent.VK_0
-						&& keyChar <= KeyEvent.VK_9) {
-				} else {
-					if (keyChar == KeyEvent.VK_BACK_SPACE) {
+				if (number.getText().length() == 4) {
+					if (number.getText().length() < 4
+							&& keyChar >= KeyEvent.VK_0
+							&& keyChar <= KeyEvent.VK_9) {
 					} else {
-						a.consume();
+						if (keyChar == KeyEvent.VK_BACK_SPACE) {
+						} else {
+							a.consume();
+						}
 					}
 				}
 			}
@@ -108,7 +109,6 @@ public class passwardmain extends JFrame {
 				}
 				X = 4;
 				number.setText("");
-
 			}
 		});
 
@@ -127,36 +127,25 @@ public class passwardmain extends JFrame {
 				JOptionPane.YES_NO_OPTION);
 		if (n == JOptionPane.YES_OPTION) {
 			String resturant[] = { "霧峰老牌羊肉吧!\n在霧峰區樹仁路25號",
-					"土耳其美食吧!\n在台中市霧峰區柳豐六街30號", 
-					"弘爺早餐店吧!\n在台中市霧峰區柳豐路428號",
+					"土耳其美食吧!\n在台中市霧峰區柳豐六街30號", "弘爺早餐店吧!\n在台中市霧峰區柳豐路428號",
 					"Pizza Factory 披薩工廠吧!\n在台中市霧峰區樹仁五街12號",
-					"老先覺麻辣窯燒火鍋吧!\n在台中市霧峰區樹仁路45號",
-					"三顧茅廬麻辣滷味吧!\n在台中市霧峰區樹仁路71號",
+					"老先覺麻辣窯燒火鍋吧!\n在台中市霧峰區樹仁路45號", "三顧茅廬麻辣滷味吧!\n在台中市霧峰區樹仁路71號",
 					"NU PASTA杯杯麵吧!\n在台中市霧峰區樹仁路107號",
 					"O2 Brunch 歐圖早午餐廚房吧!\n在台中市霧峰區樹仁五街6號",
-					"韓國食堂吧!\n在台中市霧峰區林森路998號", 
-					"四海遊龍鍋貼專賣店吧!\n在台中市霧峰區中正路841號",
-					"台北江麻辣臭豆腐專賣舖吧!\n在台中市霧峰區樹仁路56-5號",
-					"大慶麵店吧!\n在台中市霧峰區樹仁路46號",
-					"振卿肉羹大王吧!\n在台中市霧峰區林森路762號",
-					"祥鶴日本料理吧!\n在台中市霧峰區樹仁路39號",
-					"口福牛肉麵吧!\n在台中市霧峰區樹仁路12號", 
-					"狸之屋日式食堂吧!\n在台中市霧峰區柳豐路492號",
-					"廣鎮茶藝館吧!\n在台中市霧峰區林森路998號",
-					"悟饕池上飯包吧!\n在台中市霧峰區中正路1101-2號",
-					"Circus簡餐店吧!\n在台中市霧峰區柳豐六街36號",
-					"拉亞漢堡吧!\n在台中市霧峰區柳豐二街47號",
-					"舞丼吧!\n在台中市霧峰區柳豐路478號",
-					"虎匠拉麵吧!\n在台中市霧峰區柳豐六街26號",
-					"李記涼麵吧!\n在台中市霧峰區柳豐六街18號", 
-					"禾家簡餐吧!\n在台中市霧峰區柳豐六街9號",
-					"品軫嗶嗶飯吧!\n在台中市台中市霧峰區柳豐路458號",
-					"讚不絕口吧!\n在台中市霧峰區柳豐路480號" };
+					"韓國食堂吧!\n在台中市霧峰區林森路998號", "四海遊龍鍋貼專賣店吧!\n在台中市霧峰區中正路841號",
+					"台北江麻辣臭豆腐專賣舖吧!\n在台中市霧峰區樹仁路56-5號", "大慶麵店吧!\n在台中市霧峰區樹仁路46號",
+					"振卿肉羹大王吧!\n在台中市霧峰區林森路762號", "祥鶴日本料理吧!\n在台中市霧峰區樹仁路39號",
+					"口福牛肉麵吧!\n在台中市霧峰區樹仁路12號", "狸之屋日式食堂吧!\n在台中市霧峰區柳豐路492號",
+					"廣鎮茶藝館吧!\n在台中市霧峰區林森路998號", "悟饕池上飯包吧!\n在台中市霧峰區中正路1101-2號",
+					"Circus簡餐店吧!\n在台中市霧峰區柳豐六街36號", "拉亞漢堡吧!\n在台中市霧峰區柳豐二街47號",
+					"舞丼吧!\n在台中市霧峰區柳豐路478號", "虎匠拉麵吧!\n在台中市霧峰區柳豐六街26號",
+					"李記涼麵吧!\n在台中市霧峰區柳豐六街18號", "禾家簡餐吧!\n在台中市霧峰區柳豐六街9號",
+					"品軫嗶嗶飯吧!\n在台中市台中市霧峰區柳豐路458號", "讚不絕口吧!\n在台中市霧峰區柳豐路480號" };
 			int a = (int) (Math.random() * resturant.length);
 			Object[] options = { "開動了!" };
-			JOptionPane.showOptionDialog(null, "現在去吃" + resturant[a],
-					"吃飯了!", JOptionPane.DEFAULT_OPTION,
-					JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+			JOptionPane.showOptionDialog(null, "現在去吃" + resturant[a], "吃飯了!",
+					JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
+					null, options, options[0]);
 			System.exit(0);
 		} else {
 			System.exit(0);
@@ -174,9 +163,9 @@ public class passwardmain extends JFrame {
 				}
 			}
 		}
-//		for (int n : num) {
-//			System.out.print(n + "");
-//		}
+		// for (int n : num) {
+		// System.out.print(n + "");
+		// }
 		return num;
 	}
 }
