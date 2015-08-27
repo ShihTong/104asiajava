@@ -66,11 +66,13 @@ public class passwardmain extends JFrame {
 
 		jbtnGuess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent a) {
+				if (number.getText().length() == 4) {
 				int c = Integer.parseInt(number.getText());
 				A = 0;
 				B = 0;
 				boolean tt = false;
 				int num = (c);
+			
 				user[0] = num / 1000 % 10;
 				user[1] = num / 100 % 10;
 				user[2] = num / 10 % 10;
@@ -107,10 +109,10 @@ public class passwardmain extends JFrame {
 						answer.append("尚未答對，請繼續猜!\n");
 					}
 				}
-				X = 4;
+				}
 				number.setText("");
-			}
-		});
+			
+		}});
 
 		answer.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent b) {
