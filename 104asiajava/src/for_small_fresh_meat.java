@@ -57,7 +57,7 @@ public class for_small_fresh_meat {
 			} else {
 				if (str.equals("¥¿¤è§Î")) {
 					for (int i = c; i > 0; i--) {
-						for (int j = c; j > 0; j--) {
+						for (int j = c; j > 1; j--) {
 							System.out.print(ch);
 						}
 						System.out.println(ch);

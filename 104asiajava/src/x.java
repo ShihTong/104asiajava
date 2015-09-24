@@ -1,18 +1,31 @@
-import java.util.*;
+import java.util.Scanner;
+
 public class x {
-
-	/**
-	 * @param args
-	 */
-
-	public static void main(String[] args) { 
-		int a[]={10,20,30,40,50}; //創造陣列a 
-		for(int i=a.length;i>0;i--){ 
-		//i=陣列a的最大元素數,如果a>0的話,會執行i-1迴圈 
-		System.out.println(a[i-1]); 
-		//因為length是取得元素數,必須把她-1才會等於陣列的索引值,否則會多1造成執行錯誤 
-		} 
-		} 
-		}
-
-
+	  
+	  /**
+	   * constructor
+	   * 
+	   * */
+	  public x() {
+	    
+	  }
+	  public String [] retArray() {
+	    String [] str = new String[3];
+	    str[0] = "Welcome";
+	    str[1] = " To ";
+	    str[2] = " java";
+	    return str;
+	  }
+	  /**
+	   * 主程式
+	   * @param args 由控制台傳入的參數。
+	   * */
+	  public static void main(String[] args) {
+	    
+	    x test = new x();
+	    String [] str = test.retArray();
+	    for(int i=0;i < 3;i++) {
+	      System.out.print(str[i]);
+	    }
+	  }
+	}
