@@ -40,13 +40,13 @@ public class passwardmain extends JFrame {
 		cp.add(jlb2);
 		cp.add(jlb3);
 		jlb1.setBounds(50, 125, 300, 25);
-		jlb1.setText("é¡¯ç¤ºAç‚ºåŒå€‹ä½æ•¸ç›¸åŒ,é¡¯ç¤ºBç‚ºä¸åŒä½æ•¸ç›¸åŒ");
+		jlb1.setText("Åã¥ÜA¬°¦P­Ó¦ì¼Æ¬Û¦P,Åã¥ÜB¬°¤£¦P¦ì¼Æ¬Û¦P");
 		jlb3.setBounds(250, 25, 300, 25);
-		jlb3.setText("ä½ æœ‰10æ¬¡æ©Ÿæœƒ!!!");
+		jlb3.setText("§A¦³10¦¸¾÷·|!!!");
 		number.setBounds(30, 50, 150, 25);
 		jbtnGuess.setBounds(250, 50, 100, 25);
 		scroll.setBounds(30, 150, 320, 380);
-		number.setToolTipText("è«‹è¼¸å…¥ä¸ç›¸åŒçš„å››å€‹æ•¸å­—!!");
+		number.setToolTipText("½Ğ¿é¤J¤£¬Û¦Pªº¥|­Ó¼Æ¦r!!");
 
 		number.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent a) {
@@ -70,14 +70,14 @@ public class passwardmain extends JFrame {
 					count2--;
 					if (count >= 1&&count2<=10) {
 						jlb2.setBounds(200, 25, 300, 25);
-						jlb2.setText("ä½ å·²ç¶“çŒœäº†" + count + "æ¬¡!" + " " );
+						jlb2.setText("§A¤w¸g²q¤F" + count + "¦¸!" + " " );
 						jlb3.setText("");
 						jlb3.setBounds(290, 25, 300, 25);
-						jlb3.setText( "å‰©ä¸‹"+ count2 + "æ¬¡æ©Ÿæœƒäº†!");
+						jlb3.setText( "³Ñ¤U"+ count2 + "¦¸¾÷·|¤F!");
 						if(count2==10){
 							jlb2.setText("");
 							jlb3.setBounds(250, 25, 300, 25);
-							jlb3.setText("ä½ æœ‰10æ¬¡æ©Ÿæœƒ!!!");
+							jlb3.setText("§A¦³10¦¸¾÷·|!!!");
 						}
 					int c = Integer.parseInt(number.getText());
 					A = 0;
@@ -94,13 +94,13 @@ public class passwardmain extends JFrame {
 							if (user[i] == user[j]) {
 								count--;
 								count2++;
-								jlb2.setText("ä½ å·²ç¶“çŒœäº†" + count + "æ¬¡!" + " " );
-								jlb3.setText( "å‰©ä¸‹"+ count2 + "æ¬¡æ©Ÿæœƒäº†!");
-								answer.append("è«‹ç‰©è¼¸å…¥ç›¸åŒçš„æ•¸å­—ï¼Œè«‹å†è©¦ä¸€æ¬¡!\n");
+								jlb2.setText("§A¤w¸g²q¤F" + count + "¦¸!" + " " );
+								jlb3.setText( "³Ñ¤U"+ count2 + "¦¸¾÷·|¤F!");
+								answer.append("½Ğª«¿é¤J¬Û¦Pªº¼Æ¦r¡A½Ğ¦A¸Õ¤@¦¸!\n");
 								if(count2==10){
 									jlb2.setText("");
 									jlb3.setBounds(250, 25, 300, 25);
-									jlb3.setText("ä½ æœ‰10æ¬¡æ©Ÿæœƒ!!!");
+									jlb3.setText("§A¦³10¦¸¾÷·|!!!");
 								}
 								tt = true;
 								break;
@@ -124,18 +124,18 @@ public class passwardmain extends JFrame {
 						answer.append(number.getText() + "\t");
 						answer.append(A + "A" + B + "B\t");
 						if (A == 4) {
-							answer.append("ä½ è´å•¦!å¯ä»¥åƒæ±è¥¿äº†!\n");
-							popFrame("ä½ è´å•¦!å¯ä»¥åƒæ±è¥¿äº†!");
+							answer.append("§AÄ¹°Õ!¥i¥H¦YªF¦è¤F!\n");
+							popFrame("§AÄ¹°Õ!¥i¥H¦YªF¦è¤F!");
 						} else {
-							answer.append("å°šæœªç­”å°ï¼Œè«‹ç¹¼çºŒçŒœ!\n");
+							answer.append("©|¥¼µª¹ï¡A½ĞÄ~Äò²q!\n");
 						}
 					}
 
 					number.setText("");
 					if (count == 10) {
-						Object[] option = { "é‡ä¾†ä¸€é!","èªè¼¸äº†!" };
+						Object[] option = { "­«¨Ó¤@¹M!","»{¿é¤F!" };
 						int n = JOptionPane.showOptionDialog(null,
-								"å“ˆå“ˆï¼Œä½ è¼¸äº†!!!", "ä½ è¼¸äº†!!!",
+								"«¢«¢¡A§A¿é¤F!!!", "§A¿é¤F!!!",
 								JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE ,
 								null, option, option[0]);
 						if (n == JOptionPane.YES_OPTION) {
@@ -144,7 +144,7 @@ public class passwardmain extends JFrame {
 							data = rndNum();
 							answer.setText("");
 							jlb2.setText("");
-							jlb3.setText("ä½ æœ‰10æ¬¡æ©Ÿæœƒ!!!");
+							jlb3.setText("§A¦³10¦¸¾÷·|!!!");
 							jlb3.setBounds(250, 25, 300, 25);
 						} else {
 							System.exit(0);
@@ -165,28 +165,28 @@ public class passwardmain extends JFrame {
 	public static void popFrame(String message) {
 
 		int n = JOptionPane.showConfirmDialog(null,
-				"ä½ è´å•¦!å¯ä»¥åƒæ±è¥¿äº†!\nä¸çŸ¥é“åƒä»€éº¼,æŒ‰æ˜¯æ±ºå®šå§!", "æ­å–œ!!!",
+				"§AÄ¹°Õ!¥i¥H¦YªF¦è¤F!\n¤£ª¾¹D¦Y¤°»ò,«ö¬O¨M©w§a!", "®¥³ß!!!",
 				JOptionPane.YES_NO_OPTION);
 		if (n == JOptionPane.YES_OPTION) {
-			String resturant[] = { "éœ§å³°è€ç‰Œç¾Šè‚‰å§!\nåœ¨éœ§å³°å€æ¨¹ä»è·¯25è™Ÿ",
-					"åœŸè€³å…¶ç¾é£Ÿå§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±å…­è¡—30è™Ÿ", "å¼˜çˆºæ—©é¤åº—å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±è·¯428è™Ÿ",
-					"Pizza Factory æŠ«è–©å·¥å» å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»äº”è¡—12è™Ÿ",
-					"è€å…ˆè¦ºéº»è¾£çª¯ç‡’ç«é‹å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»è·¯45è™Ÿ", "ä¸‰é¡§èŒ…å»¬éº»è¾£æ»·å‘³å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»è·¯71è™Ÿ",
-					"NU PASTAæ¯æ¯éºµå§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»è·¯107è™Ÿ",
-					"O2 Brunch æ­åœ–æ—©åˆé¤å»šæˆ¿å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»äº”è¡—6è™Ÿ",
-					"éŸ“åœ‹é£Ÿå ‚å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ—æ£®è·¯998è™Ÿ", "å››æµ·éŠé¾é‹è²¼å°ˆè³£åº—å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€ä¸­æ­£è·¯841è™Ÿ",
-					"å°åŒ—æ±Ÿéº»è¾£è‡­è±†è…å°ˆè³£èˆ–å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»è·¯56-5è™Ÿ", "å¤§æ…¶éºµåº—å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»è·¯46è™Ÿ",
-					"æŒ¯å¿è‚‰ç¾¹å¤§ç‹å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ—æ£®è·¯762è™Ÿ", "ç¥¥é¶´æ—¥æœ¬æ–™ç†å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»è·¯39è™Ÿ",
-					"å£ç¦ç‰›è‚‰éºµå§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ¨¹ä»è·¯12è™Ÿ", "ç‹¸ä¹‹å±‹æ—¥å¼é£Ÿå ‚å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±è·¯492è™Ÿ",
-					"å»£é®èŒ¶è—é¤¨å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æ—æ£®è·¯998è™Ÿ", "æ‚Ÿé¥•æ± ä¸Šé£¯åŒ…å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€ä¸­æ­£è·¯1101-2è™Ÿ",
-					"Circusç°¡é¤åº—å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±å…­è¡—36è™Ÿ", "æ‹‰äºæ¼¢å ¡å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±äºŒè¡—47è™Ÿ",
-					"èˆä¸¼å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±è·¯478è™Ÿ", "è™åŒ æ‹‰éºµå§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±å…­è¡—26è™Ÿ",
-					"æè¨˜æ¶¼éºµå§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±å…­è¡—18è™Ÿ", "ç¦¾å®¶ç°¡é¤å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±å…­è¡—9è™Ÿ",
-					"å“è»«å—¶å—¶é£¯å§!\nåœ¨å°ä¸­å¸‚å°ä¸­å¸‚éœ§å³°å€æŸ³è±è·¯458è™Ÿ", "è®šä¸çµ•å£å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±è·¯480è™Ÿ",
-					"éŸ“é¦™å±‹å§!\nåœ¨å°ä¸­å¸‚éœ§å³°å€æŸ³è±å…­è¡—32è™Ÿ" };
+			String resturant[] = { "Ãú®p¦ÑµP¦Ï¦×§a!\n¦bÃú®p°Ï¾ğ¤¯¸ô25¸¹",
+					"¤g¦Õ¨ä¬ü­¹§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¤»µó30¸¹", "¥°·İ¦­À\©±§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¸ô428¸¹",
+					"Pizza Factory ©ÜÂÄ¤u¼t§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¤­µó12¸¹",
+					"¦Ñ¥ıÄ±³Â»¶½`¿N¤õÁç§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¸ô45¸¹", "¤TÅU­TÃf³Â»¶º±¨ı§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¸ô71¸¹",
+					"NU PASTAªMªMÄÑ§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¸ô107¸¹",
+					"O2 Brunch ¼Ú¹Ï¦­¤ÈÀ\¼p©Ğ§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¤­µó6¸¹",
+					"Áú°ê­¹°ó§a!\n¦b¥x¤¤¥«Ãú®p°ÏªL´Ë¸ô998¸¹", "¥|®ü¹CÀsÁç¶K±M½æ©±§a!\n¦b¥x¤¤¥«Ãú®p°Ï¤¤¥¿¸ô841¸¹",
+					"¥x¥_¦¿³Â»¶¯ä¨§»G±M½æçE§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¸ô56-5¸¹", "¤j¼yÄÑ©±§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¸ô46¸¹",
+					"®¶­ë¦×Ã¼¤j¤ı§a!\n¦b¥x¤¤¥«Ãú®p°ÏªL´Ë¸ô762¸¹", "²»Åb¤é¥»®Æ²z§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¸ô39¸¹",
+					"¤fºÖ¤û¦×ÄÑ§a!\n¦b¥x¤¤¥«Ãú®p°Ï¾ğ¤¯¸ô12¸¹", "¯W¤§«Î¤é¦¡­¹°ó§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¸ô492¸¹",
+					"¼sÂí¯ùÃÀÀ]§a!\n¦b¥x¤¤¥«Ãú®p°ÏªL´Ë¸ô998¸¹", "®©Å¹¦À¤W¶º¥]§a!\n¦b¥x¤¤¥«Ãú®p°Ï¤¤¥¿¸ô1101-2¸¹",
+					"CircusÂ²À\©±§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¤»µó36¸¹", "©Ô¨Èº~³ù§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¤Gµó47¸¹",
+					"»RÉd§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¸ô478¸¹", "ªê¦K©ÔÄÑ§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¤»µó26¸¹",
+					"§õ°O²DÄÑ§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¤»µó18¸¹", "¥İ®aÂ²À\§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¤»µó9¸¹",
+					"«~ÜH¹Í¹Í¶º§a!\n¦b¥x¤¤¥«¥x¤¤¥«Ãú®p°Ï¬hÂ×¸ô458¸¹", "Æg¤£µ´¤f§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¸ô480¸¹",
+					"Áú­»«Î§a!\n¦b¥x¤¤¥«Ãú®p°Ï¬hÂ×¤»µó32¸¹" };
 			int a = (int) (Math.random() * resturant.length);
-			Object[] options = { "é–‹å‹•äº†!" };
-			JOptionPane.showOptionDialog(null, "ç¾åœ¨å»åƒ" + resturant[a], "åƒé£¯äº†!",
+			Object[] options = { "¶}°Ê¤F!" };
+			JOptionPane.showOptionDialog(null, "²{¦b¥h¦Y" + resturant[a], "¦Y¶º¤F!",
 					JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
 					null, options, options[0]);
 			System.exit(0);
