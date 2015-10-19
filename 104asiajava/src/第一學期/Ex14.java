@@ -16,13 +16,18 @@ public class Ex14 {
 
 	private static void F(int w, int h) {
 		// TODO Auto-generated method stub
-		int number_h = 1;
-		for (int i = h; i > 0; i--) {
-			for (int j = w; j > 0; j--) {
-				number_h++;
-				System.out.print(number_h+"\t");
+		int a = 0, b = 1;
+		for (int i = 0; i < h; i++) {
+			for (int j = 0; j < w; j++) {
+				b = b + a;
+				System.out.print(b);
+				System.out.print("\t");
+				b++;
 			}
-			System.out.println("");
+			System.out.print("\n");
+			a++;
+			b = 1;
 		}
+
 	}
 }
