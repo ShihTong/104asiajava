@@ -11,9 +11,9 @@ public class year {
 			System.out.println("是閏年");
 		} else {
 			if (year > 100 && year % 100 == 0) {
-				System.out.println("不是閏年");
+				System.out.println("平年");
 			} else {
-				System.out.println("不是閏年");
+				System.out.println("平年");
 			}
 
 		}
