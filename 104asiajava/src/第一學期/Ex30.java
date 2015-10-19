@@ -13,10 +13,10 @@ int b = 0;
 int c = 0;
 for(int i =0 ;i<6;i++){
 	int x = scn.nextInt();
-	if(x<0){
+	if(x>0){
 		a++;
 	}
-	if(x>0){
+	if(x<0){
 		b++;
 	}
 	if(x==0){
