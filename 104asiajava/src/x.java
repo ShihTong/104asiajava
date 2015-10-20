@@ -1,31 +1,26 @@
 import java.util.Scanner;
-
-public class x {
-	  
-	  /**
-	   * constructor
-	   * 
-	   * */
-	  public x() {
-	    
-	  }
-	  public String [] retArray() {
-	    String [] str = new String[3];
-	    str[0] = "Welcome";
-	    str[1] = " To ";
-	    str[2] = " java";
-	    return str;
-	  }
-	  /**
-	   * 主程式
-	   * @param args 由控制台傳入的參數。
-	   * */
-	  public static void main(String[] args) {
-	    
-	    x test = new x();
-	    String [] str = test.retArray();
-	    for(int i=0;i < 3;i++) {
-	      System.out.print(str[i]);
-	    }
-	  }
-	}
+ 
+public class x{
+ 
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        while (true) {
+            String S = input.next();
+            if (S.matches("0"))
+                break;
+            long sum = 0;
+            int next = 1;
+            for (int i = 0; i < S.length(); i++) {
+                if (i % 2 != 0)
+                    sum += Integer.parseInt(S.substring(i, next));
+                else if (i % 2 == 0)
+                    sum -= Integer.parseInt(S.substring(i, next));
+                next++;
+            }
+            if (sum % 11 == 0)
+                System.out.println(S + " is a multiple of 11.");
+            else
+                System.out.println(S + " is not a multiple of 11.");
+        }
+    }
+}
