@@ -1,4 +1,4 @@
-package 材厩戳;
+package 绗竴瀛告湡;
 
 import java.util.Scanner;
 
@@ -7,11 +7,11 @@ public class Ex17 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
-		System.out.print("叫块タ俱计(1):");
+		System.out.print("璜嬭几鍏ユ鏁存暩(1):");
 		int a = scn.nextInt();
-		System.out.print("叫块タ俱计(2):");
+		System.out.print("璜嬭几鍏ユ鏁存暩(2):");
 		int b = scn.nextInt();
-		System.out.print("叫块タ俱计(3):");
+		System.out.print("璜嬭几鍏ユ鏁存暩(3):");
 		int c = scn.nextInt();
 		int max = 1;
 		for (int i = b; i >= 1; i--) {
@@ -21,10 +21,10 @@ public class Ex17 {
 				for (int j = c; j >= 1; j--) {
 					if (c % j == 0 && min % j == 0) {
 						max = j;
-						System.out.print("程そ计:"+(min * c / max));
+						System.out.print("鏈�灏忓叕鍊嶆暩:"+(min * c / max));
 						break;
 					}
-				}
+				}gg3b0
 			}
 		}
 	}
